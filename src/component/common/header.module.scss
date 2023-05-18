@@ -1,0 +1,18 @@
+@import '../../sass/variables.scss';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 3.75rem;
+    .nav{
+        color: $color-primary;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .active{
+           text-decoration: underline;
+        }
+    }
+}
+
+
