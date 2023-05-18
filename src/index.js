@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import "./sass/main.scss";
 import Home from "./component/Page_home/Home";
 import About from "./component/Page_about/About";
 import Error from "./component/Page_error/Error";
