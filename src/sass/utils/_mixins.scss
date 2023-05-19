@@ -3,3 +3,19 @@
         @content;
     }
 }
+
+@mixin fonts ($size-desktop: 24px, $weight-desktop: 500, $size-mobile: 12px, $weight-mobile: 500){
+    font-size: $size-desktop;
+    font-weight: $weight-desktop;
+    @include mobile-only{
+        font-size: $size-mobile;
+        font-weight: $weight-mobile;
+    }
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }

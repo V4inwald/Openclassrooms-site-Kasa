@@ -1,8 +1,8 @@
 @import '../../sass/main.scss';
 
 .header{
-    display: flex;
-    justify-content: space-between;
+    @include fonts(24px,500,12px,500);
+    @include flex(row, space-between, center);
     padding-top: 40px;
     padding-bottom: 40px;
     @include mobile-only{
@@ -16,14 +16,12 @@
             height: 40px;
         }
     }
+    
     .nav{
         color: $color-primary;
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
+        @include flex(row, space-between, center);
         gap: 50px;
         @include mobile-only{
-            font-size: 0.75rem;
             gap: 10px;
         }
 
