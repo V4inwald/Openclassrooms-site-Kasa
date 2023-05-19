@@ -4,12 +4,12 @@
     }
 }
 
-@mixin fonts ($size-desktop: 24px, $weight-desktop: 500, $size-mobile: 12px, $weight-mobile: 500){
-    font-size: $size-desktop;
-    font-weight: $weight-desktop;
+@mixin fonts ($size-desktop: 24px, $size-mobile: 12px, $weight: 500){
+    font-size: clamp($size-mobile, 5vw , $size-desktop);
+    font-weight: $weight;
     @include mobile-only{
-        font-size: $size-mobile;
-        font-weight: $weight-mobile;
+        font-size: clamp($size-mobile, 3vw , $size-desktop);
+        font-weight: $weight;
     }
 }
 

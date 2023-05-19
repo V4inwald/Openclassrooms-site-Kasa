@@ -1,7 +1,7 @@
 @import '../../sass/main.scss';
 
 .header{
-    @include fonts(24px,500,12px,500);
+    @include fonts(1.5rem,0.75rem,500);
     @include flex(row, space-between, center);
     padding-top: 40px;
     padding-bottom: 40px;
@@ -20,7 +20,7 @@
     .nav{
         color: $color-primary;
         @include flex(row, space-between, center);
-        gap: 50px;
+        gap: clamp(10px, 5vw, 50px);
         @include mobile-only{
             gap: 10px;
         }

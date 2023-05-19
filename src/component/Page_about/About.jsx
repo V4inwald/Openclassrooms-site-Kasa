@@ -1,9 +1,10 @@
 import React from 'react'
+import Banner from '../Banner/Banner'
 
 function About() {
     return (
         <main>
-            <h1>Page à propos</h1>
+            <Banner />
         </main>
     )
 }
