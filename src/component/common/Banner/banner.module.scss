@@ -1,4 +1,4 @@
-@import '../../sass/main.scss';
+@import '../../../sass/main.scss';
 
 .banner {
     border-radius: 25px;
@@ -6,11 +6,12 @@
     padding: 0 1rem;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../../assets/banner-home.png);
-    margin-bottom: 43px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../../../assets/images/banner-home.png);
+    margin: 43px 0;
     @include mobile-only {
         height: 111px;
-        margin-bottom: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
     }
 
     p {
@@ -24,7 +25,7 @@
     }
 
     &.banner-about{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../../assets/banner-about.png);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../../../assets/images/banner-about.png);
     }
 
 }

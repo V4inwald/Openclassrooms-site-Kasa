@@ -1,0 +1,25 @@
+@import '../../../sass/main.scss';
+
+.gallery {
+    border-radius: 25px;
+    padding: clamp(10px, 4vw, 50px);
+    background-color: $color-background-secondary;
+    width: 100%;
+    margin: 43px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(10px, 4vw, 50px);
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-only {
+        margin: 20px 0;
+        border-radius: 0;
+        padding: 0;
+        background-color: $color-background;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

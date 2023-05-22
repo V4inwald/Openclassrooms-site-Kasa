@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../Banner/Banner'
+import Banner from '../common/Banner/Banner'
 
 function About() {
     return (

@@ -1,11 +1,12 @@
 import React from 'react'
-import Banner from '../Banner/Banner'
+import Banner from '../common/Banner/Banner'
+import Gallery from '../common/Gallery/Gallery'
 
 function Home() {
     return (
       <main>
         <Banner />
-        <section className="gallery"></section>
+        <Gallery />
       </main>
     );
   }
