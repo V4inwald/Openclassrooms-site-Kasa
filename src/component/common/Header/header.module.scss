@@ -1,0 +1,32 @@
+@import '../../../sass/main.scss';
+
+.header{
+    @include fonts(1.5rem,0.75rem,500);
+    @include flex(row, space-between, center);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @include mobile-only{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    img{
+        height: 3.5rem;
+        @include mobile-only{
+            height: 40px;
+        }
+    }
+    
+    .nav{
+        color: $color-primary;
+        @include flex(row, space-between, center);
+        gap: clamp(10px, 5vw, 50px);
+        @include mobile-only{
+            gap: 10px;
+        }
+
+        .active{
+           text-decoration: underline;
+        }
+    }
+}

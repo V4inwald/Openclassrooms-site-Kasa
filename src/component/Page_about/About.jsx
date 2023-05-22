@@ -1,10 +1,11 @@
 import React from 'react'
+import Banner from '../common/Banner/Banner'
 
 function About() {
     return (
-        <div>
-            <h1>Page à propos</h1>
-        </div>
+        <main>
+            <Banner />
+        </main>
     )
 }
 

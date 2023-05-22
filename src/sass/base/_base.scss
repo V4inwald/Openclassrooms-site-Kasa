@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+main, header{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 70px;
+  @include mobile-only{
+    padding: 0 20px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li{
+  list-style: none;
+}

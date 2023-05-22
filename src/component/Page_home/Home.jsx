@@ -1,8 +1,13 @@
+import React from 'react'
+import Banner from '../common/Banner/Banner'
+import Gallery from '../common/Gallery/Gallery'
+
 function Home() {
     return (
-      <div>
-        <h1>Page d'acceuil</h1>
-      </div>
+      <main>
+        <Banner />
+        <Gallery />
+      </main>
     );
   }
   

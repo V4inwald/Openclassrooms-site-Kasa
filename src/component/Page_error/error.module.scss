@@ -1,0 +1,22 @@
+@import '../../sass/main.scss';
+
+.error{
+    color: $color-primary;
+    @include flex(column);
+    text-align: center;
+
+    .error-message{
+        @include flex(column);
+        @include fonts(2.25rem,1.13rem,500);
+        margin-bottom: clamp(1.25rem,20vw,10rem);
+        h1{
+            font-size: clamp(5rem, 30vw ,18rem);
+            font-weight: 700;
+        }
+    }
+    .link{
+        text-decoration: underline;
+        @include fonts(18px,14px,500);
+        margin-bottom: clamp(1.25rem,20vw,10rem)
+    }
+}

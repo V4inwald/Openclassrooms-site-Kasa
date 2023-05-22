@@ -1,0 +1,21 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin fonts ($size-desktop: 24px, $size-mobile: 12px, $weight: 500){
+    font-size: clamp($size-mobile, 5vw , $size-desktop);
+    font-weight: $weight;
+    @include mobile-only{
+        font-size: clamp($size-mobile, 3vw , $size-desktop);
+        font-weight: $weight;
+    }
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
