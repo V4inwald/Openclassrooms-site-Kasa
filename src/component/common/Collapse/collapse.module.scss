@@ -1,0 +1,55 @@
+@import '../../../sass/main.scss';
+
+.collapse{
+    margin: 30px 0;
+    padding: 0 clamp(0px,4vw,100px);
+    @include mobile-only{
+        padding: 0;
+        margin: 20px 0;
+    }
+    h2{
+        @include fonts(1.5rem,13px,500);
+    }
+
+    .trigger{
+        background-color: $color-primary;
+        @include flex(row, space-between);
+        color: $color-secondary;
+        border-radius: 5px;
+        padding: 10px 18px;
+        cursor: pointer;
+    }
+    img{
+        transition: 0.3s ease-in-out;
+        @include mobile-only{
+            width: 14px;
+        }
+    }
+
+    &.open{
+        p{
+            color: $color-primary;
+            background-color: $color-background-secondary;
+            padding: 10px 18px;
+            border-radius: 0 0 5px 5px;
+            @include fonts(1.5rem,0.75rem,500);
+            visibility: visible;
+            opacity: 1;
+            height: auto;
+            transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+        }
+        img{
+            transform: rotate(180deg);
+        }
+    }
+    &.closed{
+        p{
+            visibility: hidden;
+            height: 0;
+            opacity: 0;
+        }
+        img{
+            transform: rotate(0deg);
+        }
+    }
+}

@@ -6,7 +6,9 @@ function Header() {
   let path = useLocation().pathname;
   return (
     <header className={styles.header}>
-      <Link to="/" ><img src={logo} alt="logo de kasa" /></Link>
+      <h1>
+        <Link to="/" ><img src={logo} alt="logo de kasa" /></Link>
+      </h1>
       <nav className={styles.nav}>
         <Link to="/" className={path === '/' ? styles.active : ''}>Accueil</Link>
         <Link to="/about" className={path === '/about' ? styles.active : ''}>A Propos</Link>
