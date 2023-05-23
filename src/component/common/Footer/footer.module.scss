@@ -7,4 +7,8 @@
     gap: 1.25rem;
     height: 209px;
     color: $color-secondary;
+    margin-top: 40px;
+    @include mobile-only{
+        margin-top: 30px;
+    }
 }

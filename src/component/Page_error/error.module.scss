@@ -9,7 +9,7 @@
         @include flex(column);
         @include fonts(2.25rem,1.13rem,500);
         margin-bottom: clamp(1.25rem,20vw,10rem);
-        h1{
+        h2{
             font-size: clamp(5rem, 30vw ,18rem);
             font-weight: 700;
         }
