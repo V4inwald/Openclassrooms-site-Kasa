@@ -11,14 +11,21 @@ function Collapse ({title, content}) {
         setToggle(toggleOpen => !toggleOpen);
     }
 
+    const collapseContent = {content}.content
+    let toShow = collapseContent;
 
+    // if {content} is an array then I turn each element into a <p>
+    if (Array.isArray(collapseContent)) {
+        toShow = collapseContent.map((element) => <p key={element}>{element}</p>)
+    } 
+    
     return (
         <div className={`${styles.collapse} ${toggleOpen ? styles.open : styles.closed}`}>
             <div onClick={handleClick} className={styles.trigger}>
                 <h2>{title}</h2>
                 <img src={arrow} alt={toggleOpen ? 'Cacher le contenu' : 'Afficher le contenu'} />
             </div>
-            <p>{content}</p>
+            <div className={styles.content}>{toShow}</div> 
         </div>
     );
   }
