@@ -6,18 +6,14 @@ import starInactive from '../../../assets/images/star-inactive.png';
 function Rating({score}) {
 
     const rating = {score}.score;
-
-    const activeStars = rating;
-    const inactiveStars = 5 - rating;
-
+    const counter = [1,2,3,4,5];
 
     return (
         <div className={styles.rating}>
-
-            {/* toDo: find how to put a loop here to achieve desired output*/}
-            {/* <img src={starActive} alt={'active star'} />
-            <img src={starInactive} alt={'inactive star'} /> */}
-
+            {counter.map((star) => rating >= star ? 
+                (< img key={`rating-${star}`} className={styles.star} src={starActive} alt={'active star'} /> ) : 
+                (< img key={`rating-${star}`} className={styles.star} src={starInactive} alt={'inactive star'} /> )
+            )}
         </div>
     );
   }

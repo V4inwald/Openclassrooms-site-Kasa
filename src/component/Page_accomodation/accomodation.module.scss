@@ -1,2 +1,69 @@
 @import '../../sass/main.scss';
 
+.accomodation{
+    box-sizing: border-box;
+    color: $color-primary;
+
+    .info-container{
+        margin-top: 30px;
+        @include flex (row, space-between, baseline);
+        @include mobile-only{
+            @include flex (column, space-between, baseline);
+            margin-top: 30px;
+        }
+        h2{
+            font-weight: 500;
+            font-size: clamp(19px,7vw,36px);
+            @include mobile-only{
+                font-size: clamp(19px,5vw,36px);
+            }
+        }
+        h3{
+            font-weight: 500;
+            font-size: clamp(14px,4vw,18px);
+            @include mobile-only{
+                font-size: clamp(14px,3vw,18px);
+            }
+        }
+        .accomodation-tags{
+            @include flex (row, flex-start, center);
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            @include mobile-only{
+                margin-top: 10px;
+            }
+            p{
+                background-color: $color-primary;
+                color: $color-secondary;
+                border-radius: 10px;
+                padding: 3px clamp(10px,3vw,30px);
+                @include fonts(14px,10px,500);
+            }
+        }
+
+    }
+    .host-info{
+        @include flex (column, space-between, center);
+        @include mobile-only{
+            @include flex (row-reverse, space-between, center);
+            width: 98%;
+            margin-top: 17px;
+        }
+        .host{
+            @include flex (row, center, center);
+            text-align: end;
+            gap: 10px;
+            p{
+                @include fonts(18px,12px,500);
+            }
+            img{
+                border-radius: 100%;
+                height: clamp(32px,8vw,64px);
+            }
+        }
+    }
+    .collapse-container{
+        @include flex (row, space-between, start);
+    }
+}

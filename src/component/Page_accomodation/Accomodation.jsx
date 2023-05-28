@@ -43,10 +43,12 @@ function Accomodation() {
             </div>
             <div className={styles['collapse-container']}>
                 <Collapse
+                    // className={styles['collapse-accomodations']}
                     title={'Description'}
                     content={accomodationData[0].description}
                 />
                 <Collapse
+                    // className={styles['collapse-accomodations']}
                     title={'Équipements'}
                     content={accomodationData[0].equipments}
                 />

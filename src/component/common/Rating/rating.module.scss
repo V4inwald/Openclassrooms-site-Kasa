@@ -1,5 +1,18 @@
 @import '../../../sass/main.scss';
 
 .rating{
-    
+    display: flex;
+    box-sizing: border-box;
+    gap: clamp(6px,1vw,15px);
+    margin-top: 20px;
+    @include mobile-only{
+        gap:6px;
+        margin-top: 10px;
+    }
+    .star{
+        height: 24px;
+        @include mobile-only{
+            height: 13px;
+        }
+    }
 }
