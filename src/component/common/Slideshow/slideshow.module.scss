@@ -1,0 +1,57 @@
+@import '../../../sass/main.scss';
+
+.slideshow{
+    position: relative;
+    .current{
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: clamp(255px, 50vw, 415px);
+        border-radius: 25px;
+        z-index: -1;
+        @include mobile-only{
+            height: clamp(200px, 50vw, 300px);
+            border-radius: 10px;
+        }
+    }
+    .arrow{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 20%;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover{
+            filter: drop-shadow(4px 8px 10px rgba(0,0,0,0.6));
+            transform: translateY(-50%) scale(1.02);
+        }
+        &:active{
+            transform: translateY(-50%) scale(0.9);
+        }
+    }
+    .arrow-right{
+        right: clamp(10px,3vw,30px);
+    }
+    .arrow-left{
+        left: clamp(10px,3vw,30px);
+    }
+    .counter{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-secondary;
+        @include mobile-only{
+            display: none;
+        }
+        transition: 0.2s;
+        &:hover{
+            filter: drop-shadow(0 0 8px black);
+        }
+    }
+    .hide{
+        display: none;
+    }
+}
