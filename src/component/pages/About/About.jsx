@@ -1,7 +1,7 @@
 import React from 'react';
-import Banner from '../common/Banner/Banner';
-import Collapse from '../common/Collapse/Collapse';
-import data from '../../assets/data/aboutPageContent.json';
+import Banner from '../../common/Banner/Banner';
+import Collapse from '../../common/Collapse/Collapse';
+import data from '../../../assets/data/aboutPageContent.json';
 
 function About() {
     return (
@@ -14,6 +14,7 @@ function About() {
                             key={data.id}
                             title={data.title}
                             content={data.content}
+                            open={false}
                         />
                     )
                 })}

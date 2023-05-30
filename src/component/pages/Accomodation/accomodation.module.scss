@@ -1,4 +1,4 @@
-@import '../../sass/main.scss';
+@import '../../../sass/main.scss';
 
 .accomodation{
     box-sizing: border-box;
@@ -6,6 +6,7 @@
 
     .info-container{
         margin-top: 30px;
+        column-gap: 30px;
         @include flex (row, space-between, baseline);
         @include mobile-only{
             @include flex (column, space-between, baseline);
@@ -37,11 +38,21 @@
                 background-color: $color-primary;
                 color: $color-secondary;
                 border-radius: 10px;
+                @include mobile-only{
+                    border-radius: 5px;
+                }
                 padding: 3px clamp(10px,3vw,30px);
                 @include fonts(14px,10px,500);
+                transition: 0.2s;
+                cursor: pointer;
+                &:hover{
+                    @include hover-card-effect;
+                }
+                &:active{
+                    transform: scale(0.9);
+                }
             }
         }
-
     }
     .host-info{
         @include flex (column, space-between, center);
@@ -65,5 +76,10 @@
     }
     .collapse-container{
         @include flex (row, space-between, start);
+        margin-top: 20px;
+        gap: 20px;
+        @include mobile-only{
+            @include flex (column);
+        }
     }
 }
