@@ -75,7 +75,7 @@
         }
     }
     .collapse-container{
-        @include flex (row, space-between, start);
+        @include flex (row, space-between, flex-start);
         margin-top: 20px;
         gap: 20px;
         @include mobile-only{
